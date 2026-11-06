@@ -1,0 +1,36 @@
+DISCORD_TOKEN=
+# DISCORD_CLIENT_ID is optional (the bot detects it).
+DISCORD_CLIENT_ID=
+DISCORD_GUILD_ID=
+
+# AI provider: ollama (local, free, default) or gemini
+AI_PROVIDER=gemini
+
+# Ollama (run `ollama pull llama3.1:8b` first; `ollama list` shows exact names)
+OLLAMA_MODEL=llama3.1:8b
+OLLAMA_HOST=http:
+# Context window in tokens; lower it (e.g. 4096) if you run out of RAM/VRAM
+OLLAMA_NUM_CTX=8192
+OLLAMA_NUM_PREDICT=1200
+OLLAMA_TIMEOUT_MS=180000
+
+# Optional Gemini Ai
+GEMINI_API_KEY=
+GEMINI_API_KEY1=
+GEMINI_API_KEY2=
+GEMINI_API_KEY3=
+GEMINI_API_KEY4=
+GEMINI_API_KEY5=
+GEMINI_API_KEY6=
+GEMINI_API_KEY7=
+GEMINI_API_KEY8=
+GEMINI_API_KEY9=
+GEMINI_API_KEY10=
+GEMINI_API_KEY11=
+# More can be added
+GEMINI_MODEL=gemini-3-flash-preview
+
+# OPTIONAL: automatically answer human messages in this text channel.
+# Paste the channel ID here; blank disables automatic replies.
+# The server owner can change it while running with /settingchange.
+AUTO_REPLY_CHANNEL_ID=
