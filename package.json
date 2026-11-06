@@ -1,0 +1,17 @@
+{
+  "name": "pavlov-modkit-ai",
+  "version": "1.2.0",
+  "description": "AI assistant for Pavlov Shack Modkit and Unreal Engine (Gemini)",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node src/deploy-commands.js"
+  },
+  "engines": { "node": ">=18.17" },
+  "dependencies": {
+    "@google/genai": "^2.3.0",
+    "discord.js": "^14.27.0",
+    "dotenv": "^16.4.7"
+  }
+}

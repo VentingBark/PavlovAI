@@ -1,0 +1,109 @@
+Title: Setting up Pavlov Modkit 3 with Unreal Engine 5.1.1 (2023 video, MaJerati's starter playlist, community)
+Source: https://www.youtube.com/watch?v=4NXrmgKthq4
+
+Community video, 2023. Its description says it shows how to set up Pavlov Modkit 3 with Unreal Engine 5.1.1. The Pavlov Wiki links it as the start of MaJerati's "Playlist of Starter Tutorials".
+
+Covers: modkit setup, installing the Pavlov Modkit, Unreal Engine 5.1.1 setup, getting started with Pavlov modding.
+
+Note: from 2023, so check details against the current modkit version.
+=====
+Title: Pavlov VR - Setting up your first map (2025, U32, PC and Shack) by BritishColonist (community)
+Source: https://www.youtube.com/watch?v=FGcqxa5ZGdU
+
+Community video by BritishColonist. The Pavlov Wiki lists it as "Setting up the Pavlov Modkit & your First Map". The title says it is for 2025, update U32, PC and Shack.
+
+Chapters seen in the description: 0:00 Introduction, 0:15 What you'll need, 0:49 Installing Unreal Engine, 1:31 Downloading the Modkit, 1:45 Creating a Mod. More chapters follow that are not recorded here.
+
+Covers: first map, modkit setup, installing Unreal Engine, downloading the Modkit, creating a mod, PC and Shack (Quest) maps.
+=====
+Title: How To Make a Pavlov VR Custom Map In 2020 Tutorial by Sir Daddy Spankus (community, old)
+Source: https://www.youtube.com/watch?v=tv1Oof5MoQA
+
+Community video from 2020. Its description says it is the first of a Pavlov VR tutorial series covering both workshop and gameplay elements.
+
+Covers: custom map basics, workshop maps, gameplay elements.
+
+Note: very old, from before the UE 5.1.1 modkit, so steps likely differ from the current modkit.
+=====
+Title: Pavlov VR Mod Kit: Game Logic overview by Mark Dey (community)
+Source: https://www.youtube.com/watch?v=g6qwk1vJ488
+
+Community overview video of the Game Logic part of the Pavlov modkit, listed under "Modkit and Blueprints" on the Pavlov Wiki. No further detail is recorded here.
+
+Covers: Game Logic, game modes setup, modkit Blueprints.
+
+Note: may be older than the current modkit.
+=====
+Title: Pavlov VR Mod Kit: Global Info overview by Mark Dey (community)
+Source: https://www.youtube.com/watch?v=XvDfRuYXI10
+
+Community overview video of the Global Info part of the Pavlov modkit, listed under "Modkit and Blueprints" on the Pavlov Wiki. No further detail is recorded here.
+
+Covers: Global Info, map info setup, modkit Blueprints.
+
+Note: may be older than the current modkit.
+=====
+Title: Pavlov VR Mod Kit: Custom Items overview by Mark Dey (community)
+Source: https://www.youtube.com/watch?v=KlxXufos_-M
+
+Community overview video of Custom Items in the Pavlov modkit, listed under "Modkit and Blueprints" on the Pavlov Wiki. No further detail is recorded here.
+
+Covers: custom items, custom weapons and props, modkit Blueprints.
+
+Note: may be older than the current modkit.
+=====
+Title: How to Add Custom Player Skins (Already as a UE4 Skeleton) by Mark Dey (community)
+Source: https://streamable.com/yqh0av
+
+Community video (hosted on Streamable) on adding custom player skins when the model already uses a UE4 skeleton, listed on the Pavlov Wiki. No further detail is recorded here.
+
+Covers: custom player skins, player models, UE4 skeleton.
+=====
+Title: Custom Playermodels In Pavlov VR (Converting to a UE4 Skeleton) by MessiahPenguin (community)
+Source: https://www.youtube.com/watch?v=-n9BUbqbL2w
+
+Community video on converting a character model to a UE4 skeleton for Pavlov VR, listed on the Pavlov Wiki. The wiki also links a base.blend file for it: https://www.mediafire.com/file/6qjr9wwfre751w4/base.blend/file (third-party download, treat with caution).
+
+Covers: custom player models, Blender, converting to the UE4 skeleton, rigging.
+=====
+Title: Rig any Player Model for Pavlov VR (Workshop Tutorial) by GoodMonkeVR (community)
+Source: https://www.youtube.com/watch?v=2BBZd1NExRU
+
+Community workshop tutorial on rigging a player model for Pavlov VR, listed on the Pavlov Wiki (the wiki's link for this video is incomplete, so this link may need checking). No further detail is recorded here.
+
+Covers: rigging player models, custom characters, workshop.
+=====
+Title: Overdraw Fix Automated Cutout Alpha by Hangry Bunnies From Mars (community)
+Source: https://www.youtube.com/watch?v=m0AQBWAbjpo
+
+Community video listed on the Pavlov Wiki as good for performant foliage practices: an automated fix for overdraw from cutout alpha materials (the wiki's link for this video is incomplete, so this link may need checking).
+
+Covers: overdraw, cutout alpha, foliage, optimization, performance, materials.
+=====
+Title: Pavlov Modding Tutorials (YouTube playlist by MaJerati, community)
+Source: https://www.youtube.com/playlist?list=PLYnjmKV0nHWGAfzKYR40Ahx8G1D6TsT9D
+
+Community playlist by MaJerati with 19 videos. Its description says it teaches creators how to set up and make functional assets for Pavlov and, by extension, Unreal Engine 5, with examples and a repository.
+
+The Pavlov Wiki lists it under Getting Started as the "Playlist of Starter Tutorials". Only the first video (Setting up Pavlov Modkit 3 with Unreal Engine 5.1.1) is recorded in this knowledge base. Do not describe other videos in it.
+
+Covers: modkit setup, making functional assets, Unreal Engine 5 for Pavlov, example assets.
+=====
+Title: Video Tutorial Collection (mod.io Pavlov guide, community)
+Source: https://mod.io/g/pavlov/r/video-tutorial-collection
+
+mod.io guide for Pavlov VR described as a collection of helpful YouTube videos for modding and map making. The individual videos in it are not recorded here, so do not describe them. More guides are on the Pavlov mod.io page: https://mod.io/g/pavlov/r
+
+Covers: video tutorials, modding, map making, mod.io guides.
+=====
+Title: BritishColonist (YouTube channel, community)
+Source: https://www.youtube.com/@BritishColonist
+
+YouTube channel of BritishColonist, creator of the video "Pavlov VR - Setting up your first map (2025, U32, PC and Shack)". Other videos from this channel are not recorded here, so do not describe them.
+
+Covers: Pavlov modkit setup, first map, Pavlov modding videos.
+=====
+Title: Pavlov Wiki Helpful Videos (index of community videos)
+Source: https://pavlovwiki.com/index.php/Helpful_Videos
+
+Pavlov VR Wiki page listing community videos in three groups: Getting Started (Sir Daddy Spankus, MaJerati, BritishColonist), Modkit and Blueprints (Mark Dey, MessiahPenguin, GoodMonkeVR, Hangry Bunnies From Mars), and External Guides (the Pavlov mod.io page). Last edited 13 September 2025. Some videos are older than the current modkit, so mention that.

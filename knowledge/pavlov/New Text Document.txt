@@ -1,0 +1,123 @@
+Title: Pavlov Modkit Nodes
+{
+  "pavlov_modkit_complete_master_registry": {
+    "GameModeAndMatchRules": [
+      { "node": "EndRound", "params": ["WinnerTeamID"], "description": "Forces the active round to end and declares the winning team index." },
+      { "node": "ResetSND", "params": [], "description": "Resets the Search and Destroy round state, bomb sites, and economy." },
+      { "node": "ResetGame", "params": [], "description": "Resets the entire match state, player spawns, scores, and map configurations." },
+      { "node": "SetRoundTime", "params": ["Seconds"], "description": "Adjusts the remaining match time dynamically." },
+      { "node": "GetRoundTimeRemaining", "params": [], "description": "Returns the seconds left in the current active round." },
+      { "node": "SetTeam", "params": ["UniqueID", "TeamID"], "description": "Moves a player to team 0 (Allies/Blue), 1 (Axis/Red), or 255 (Spectator)." },
+      { "node": "GetTeam", "params": ["UniqueID"], "description": "Returns the current team index of the specified player." },
+      { "node": "SetScore", "params": ["TeamID", "Score"], "description": "Sets the absolute score for a specific team." },
+      { "node": "AddScore", "params": ["TeamID", "Amount"], "description": "Adds points to a specific team's score." },
+      { "node": "GetScore", "params": ["TeamID"], "description": "Retrieves the current score of a team." },
+      { "node": "GiveTeamCash", "params": ["TeamID", "Amount"], "description": "Grants cash to all players on a designated team." },
+      { "node": "SetTeamCash", "params": ["TeamID", "Amount"], "description": "Sets absolute cash pool for a team." },
+      { "node": "GetTeamCash", "params": ["TeamID"], "description": "Returns the total cash of a team." }
+    ],
+    "PlayerManagementAndPawn": [
+      { "node": "GetAllPlayers", "params": [], "description": "Returns an array of all active PavlovPlayerState pointers connected to the server." },
+      { "node": "IsVRPlayer", "params": ["UniqueID"], "description": "Returns true if the target player is playing in VR vs Desktop/Spectator." },
+      { "node": "GetPlayerState", "params": ["UniqueID"], "description": "Retrieves the player state reference from a unique ID." },
+      { "node": "GetPlayerPing", "params": ["UniqueID"], "description": "Returns network latency (ping) for the player." },
+      { "node": "KillPlayer", "params": ["UniqueID"], "description": "Instantly eliminates the specified player." },
+      { "node": "DamagePlayer", "params": ["UniqueID", "DamageAmount", "DamageType"], "description": "Inflicts custom damage value to a player." },
+      { "node": "SetPlayerHealth", "params": ["UniqueID", "Health"], "description": "Sets absolute hit points for a player." },
+      { "node": "GetHealth", "params": ["UniqueID"], "description": "Returns current health value of a player." },
+      { "node": "SetPlayerArmor", "params": ["UniqueID", "Armor"], "description": "Sets kevlar/armor value for a player." },
+      { "node": "SetPlayerHelmet", "params": ["UniqueID", "bHasHelmet"], "description": "Equips or removes a helmet on a player." },
+      { "node": "SetPlayerSpeedModifier", "params": ["UniqueID", "Multiplier"], "description": "Modifies movement speed multiplier for a player." },
+      { "node": "TeleportPlayer", "params": ["UniqueID", "TargetTransform"], "description": "Instantly teleports player to a specific world transform." },
+      { "node": "GagPlayer", "params": ["UniqueID", "bIsGagged"], "description": "Mutes or unmutes a player's voice chat channel." },
+      { "node": "GetPlayerSteamID", "params": ["UniqueID"], "description": "Returns the 64-bit Steam ID string of a player." },
+      { "node": "GetPlayerUniqueId", "params": ["PlayerController"], "description": "Retrieves unique ID from controller reference." }
+    ],
+    "InventoryItemsAndWeapons": [
+      { "node": "GiveItem", "params": ["UniqueID", "ItemID"], "description": "Spawns item or weapon directly into target player hands or holsters." },
+      { "node": "RemoveAllItems", "params": ["UniqueID"], "description": "Clears all weapons, gear, and items from player inventory and holsters." },
+      { "node": "EjectMagazine", "params": ["UniqueID"], "description": "Forces magazine release on the weapon currently held by the player." },
+      { "node": "DropHeldItem", "params": ["UniqueID", "Hand"], "description": "Forces player to drop whatever item is held in their main or off hand." },
+      { "node": "SetItemSkin", "params": ["ItemID", "SkinID"], "description": "Applies a custom modded skin or texture finish to a weapon or equipment." },
+      { "node": "SetAmmoCount", "params": ["UniqueID", "AmmoCount"], "description": "Sets remaining ammunition in the active weapon." },
+      { "node": "ReloadWeapon", "params": ["UniqueID"], "description": "Forces an automated reload action on the held weapon." },
+      { "node": "GiveCash", "params": ["UniqueID", "Amount"], "description": "Adds cash balance to a specific player." },
+      { "node": "TakeCash", "params": ["UniqueID", "Amount"], "description": "Removes cash balance from a specific player." },
+      { "node": "GetPlayerCash", "params": ["UniqueID"], "description": "Returns current cash amount held by a player." },
+      { "node": "GetHeldItem", "params": ["UniqueID", "Hand"], "description": "Returns actor reference of item held in specific hand." },
+      { "node": "GetMainHandItem", "params": ["UniqueID"], "description": "Returns item in player's main hand." },
+      { "node": "GetOffHandItem", "params": ["UniqueID"], "description": "Returns item in player's off hand." },
+      { "node": "SpawnWeapon", "params": ["WeaponClass", "Transform"], "description": "Spawns unassigned weapon entity into the world." }
+    ],
+    "SpawnsAndMapObjectives": [
+      { "node": "GetRandomSpawnPoint", "params": ["TeamID"], "description": "Fetches a valid spawn point filtered by Team ID." },
+      { "node": "SpawnPlayer", "params": ["UniqueID", "Transform"], "description": "Spawns or respawns player at a designated location." },
+      { "node": "SetPlayerRespawnDelay", "params": ["UniqueID", "Seconds"], "description": "Configures respawn timer duration for a player." },
+      { "node": "GetSpawnPointsForTeam", "params": ["TeamID"], "description": "Returns array of all spawn point actors for a team." },
+      { "node": "TriggerBombObjective", "params": ["SiteID"], "description": "Activates Search and Destroy bomb planting event sequence." },
+      { "node": "DefuseBombObjective", "params": ["SiteID"], "description": "Triggers bomb defusal completion state." }
+    ],
+    "GlobalListsAndPersistentData": [
+      { "node": "AddToGlobalList", "params": ["ListTag", "ActorRef"], "description": "Adds a dynamic actor or object reference to a persistent global array." },
+      { "node": "RemoveFromGlobalList", "params": ["ListTag", "ActorRef"], "description": "Removes an actor reference from the global tracking list." },
+      { "node": "GetGlobalList", "params": ["ListTag"], "description": "Retrieves the entire stored actor collection by list tag." },
+      { "node": "ClearGlobalList", "params": ["ListTag"], "description": "Wipes all entries stored under a specific global list tag." },
+      { "node": "FindInGlobalList", "params": ["ListTag", "ActorRef"], "description": "Returns true if actor exists in global tracking list." }
+    ],
+    "HUDAnnouncementsAndScoreboard": [
+      { "node": "ShowAnnouncement", "params": ["UniqueID", "Text", "Duration"], "description": "Displays a custom on-screen text banner to a specific player or server." },
+      { "node": "SetKillFeedText", "params": ["KillerID", "VictimID", "Weapon"], "description": "Injects a custom entry into the top-right killfeed." },
+      { "node": "UpdateScoreboardUI", "params": [], "description": "Refreshes and redraws custom data bindings on the Pavlov scoreboard." },
+      { "node": "ShowHUDMessage", "params": ["UniqueID", "Message", "Color"], "description": "Displays colored message popup on player HUD." },
+      { "node": "HideHUDMessage", "params": ["UniqueID"], "description": "Clears active HUD message." },
+      { "node": "SetCustomScoreboardData", "params": ["Key", "Value"], "description": "Injects custom key-value pairs into custom scoreboards." }
+    ],
+    "ServerControlAndRCON": [
+      { "node": "RotateMap", "params": [], "description": "Forces map change to the next entry in the Game.ini map rotation list." },
+      { "node": "SwitchMap", "params": ["MapID", "GameMode"], "description": "Immediately switches the active map and game mode." },
+      { "node": "KickPlayer", "params": ["UniqueID", "Reason"], "description": "Kicks a player from the server with an optional reason string." },
+      { "node": "BanPlayer", "params": ["UniqueID", "Duration"], "description": "Permanently or temporarily bans a player's Steam ID." },
+      { "node": "InspectAllPlayers", "params": [], "description": "Returns full JSON array of current player stats, ping, health, and team." },
+      { "node": "GetServerSettings", "params": [], "description": "Retrieves active server configuration parameters." },
+      { "node": "SetServerPassword", "params": ["Password"], "description": "Changes server access password at runtime." }
+    ],
+    "VRHandAndMotionControllerNodes": [
+      { "node": "GetMotionControllerLocation", "params": ["Hand"], "description": "Returns world transform of left or right motion controller." },
+      { "node": "GetMotionControllerVelocity", "params": ["Hand"], "description": "Returns current linear and angular velocity of the VR controller." },
+      { "node": "TriggerHapticFeedback", "params": ["UniqueID", "Hand", "Intensity", "Duration"], "description": "Sends vibration feedback pulse to player's VR controller." },
+      { "node": "IsGripping", "params": ["UniqueID", "Hand"], "description": "Returns true if the player is actively holding down the grip button." },
+      { "node": "IsTriggerPressed", "params": ["UniqueID", "Hand"], "description": "Returns true if the trigger button is depressed." },
+      { "node": "GetHeadTransform", "params": ["UniqueID"], "description": "Returns world transform of the player HMD (headset)." },
+      { "node": "GetEyeGazeVector", "params": ["UniqueID"], "description": "Returns eye tracking or head-forward gaze vector." }
+    ],
+    "WeaponFiringAndBallistics": [
+      { "node": "FireWeapon", "params": ["WeaponRef"], "description": "Programmatically triggers a weapon shot from muzzle." },
+      { "node": "SpawnProjectile", "params": ["ProjectileClass", "SpawnTransform", "Velocity"], "description": "Spawns custom bullet, grenade, or projectile actor." },
+      { "node": "ApplyRecoil", "params": ["UniqueID", "RecoilAmount"], "description": "Applies camera and controller recoil kick to player." },
+      { "node": "SetWeaponDamageMultiplier", "params": ["WeaponClass", "Multiplier"], "description": "Modifies base damage multiplier for specific weapon types." },
+      { "node": "SetFireRate", "params": ["WeaponRef", "Rate"], "description": "Changes automatic firing cycle rate." },
+      { "node": "IsReloading", "params": ["WeaponRef"], "description": "Returns true if weapon is currently undergoing a reload sequence." }
+    ],
+    "CustomMeshSkinsAndMaterials": [
+      { "node": "SetMeshMaterialOverride", "params": ["Component", "MaterialIndex", "MaterialInstance"], "description": "Applies custom runtime material override to a 3D mesh component." },
+      { "node": "ApplyPlayerSkinTexture", "params": ["UniqueID", "TextureAsset"], "description": "Swaps player uniform or body texture at runtime." },
+      { "node": "SetWeaponColorTint", "params": ["WeaponRef", "Color"], "description": "Applies RGB color tint mask to a weapon." },
+      { "node": "HideMeshBone", "params": ["MeshComponent", "BoneName"], "description": "Hides specific skeletal bone on character or weapon model." }
+    ],
+    "MapEnvironmentAndTriggers": [
+      { "node": "SetFogDensity", "params": ["Density"], "description": "Dynamically adjusts environmental fog thickness." },
+      { "node": "SetSkyboxRotation", "params": ["Rotator"], "description": "Rotates map skybox orientation." },
+      { "node": "EnableTriggerVolume", "params": ["VolumeRef", "bEnable"], "description": "Turns map collision trigger boxes on or off." },
+      { "node": "PlayEnvironmentSound", "params": ["SoundAsset", "Location"], "description": "Spawns ambient 3D audio emitter in map." },
+      { "node": "SpawnParticleSystemAtLocation", "params": ["EmitterTemplate", "Transform"], "description": "Triggers visual effects explosion or particle burst." }
+    ],
+    "AdvancedServerAndMatchHooks": [
+      { "node": "OnPlayerConnect", "params": ["UniqueID"], "description": "Event hook triggered when a new player establishes socket connection." },
+      { "node": "OnPlayerDisconnect", "params": ["UniqueID"], "description": "Event hook triggered when player drops or leaves server." },
+      { "node": "OnRoundStart", "params": [], "description": "Event hook firing at the exact beginning of a new match round." },
+      { "node": "OnRoundEnd", "params": ["WinnerTeamID"], "description": "Event hook firing when round concludes." },
+      { "node": "OnPlayerDeath", "params": ["VictimID", "KillerID", "Weapon"], "description": "Event hook capturing kill events for custom logging or rewards." },
+      { "node": "SendCustomRCONResponse", "params": ["CommandID", "JsonResponse"], "description": "Returns custom payload data back through active RCON socket." }
+    ]
+  }
+}
